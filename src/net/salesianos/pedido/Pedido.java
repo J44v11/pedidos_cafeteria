@@ -7,6 +7,10 @@ public class Pedido {
     private String producto;
     private boolean paraLlevar;
 
+    public Pedido() {
+    }
+
+
     public Pedido(int codigo, String cliente, String producto, boolean paraLlevar) {
         this.codigo = codigo;
         this.cliente = cliente;
@@ -52,4 +56,15 @@ public class Pedido {
         return "Pedido: {" + "codigo=" + codigo + ", cliente='" + cliente + "', producto='" + producto + "', paraLlevar=" + paraLlevar + "}";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+
+        if (!(obj instanceof Pedido)) {
+            System.out.println("No es un pedido");
+            return false;
+         }
+
+        Pedido otroPedido = (Pedido) obj;
+        return this.codigo == otroPedido.codigo;
+    }
 }
