@@ -2,27 +2,23 @@ package net.salesianos.pedido;
 
 public class Pedido {
     
-    private int codigo;
+    private String codigo;
     private String cliente;
     private String producto;
     private boolean paraLlevar;
 
-    public Pedido() {
-    }
-
-
-    public Pedido(int codigo, String cliente, String producto, boolean paraLlevar) {
+    public Pedido(String codigo, String cliente, String producto, boolean paraLlevar) {
         this.codigo = codigo;
         this.cliente = cliente;
         this.producto = producto;
         this.paraLlevar = paraLlevar;
     }
 
-        public int getCodigo() {
+        public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 
