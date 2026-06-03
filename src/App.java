@@ -7,6 +7,7 @@ import net.salesianos.pedido.Pedido;
 public class App {
     public static void main(String[] args) throws Exception {
         Queue<Pedido> colaPedidos = new LinkedList<>();
+        Stack<Pedido> historialPreparados = new Stack<>();
 
         colaPedidos.add(new Pedido("P001", "Carla", "Cafe con Leche", true));
         colaPedidos.add(new Pedido("P002", "Mario", "Bocadillo de pollo", false));
@@ -23,5 +24,13 @@ public class App {
         System.out.println("Primer pedido sin eliminar:");
         System.out.println(colaPedidos.peek());
         System.out.println();
+
+        System.out.println("Pedidos preparados:");
+        for (int i = 0; i<3 && !colaPedidos.isEmpty(); i++){
+
+            Pedido pedidoPreparado = colaPedidos.poll();
+            historialPreparados.push(pedidoPreparado);
+            System.out.println(pedidoPreparado);
+        }
     }
 }
