@@ -1,5 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 import net.salesianos.pedido.Pedido;
 
@@ -13,8 +14,9 @@ public class App {
         colaPedidos.add(new Pedido("P004", "Ivan", "Tostada Integral", false));
         colaPedidos.add(new Pedido("P005", "Laura", "Té Verde", true));
 
-
-
-
+        System.out.println("Pedidos pendientes:");
+        for (Pedido pedido : colaPedidos) {
+            System.out.println(pedido);
+        }
     }
 }
