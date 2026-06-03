@@ -18,5 +18,10 @@ public class App {
         for (Pedido pedido : colaPedidos) {
             System.out.println(pedido);
         }
+
+        System.out.println();
+        System.out.println("Primer pedido sin eliminar:");
+        System.out.println(colaPedidos.peek());
+        System.out.println();
     }
 }
