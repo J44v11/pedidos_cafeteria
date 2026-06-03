@@ -26,11 +26,39 @@ public class App {
         System.out.println();
 
         System.out.println("Pedidos preparados:");
-        for (int i = 0; i<3 && !colaPedidos.isEmpty(); i++){
+        for (int i = 0; i < 3 && !colaPedidos.isEmpty(); i++) {
 
             Pedido pedidoPreparado = colaPedidos.poll();
             historialPreparados.push(pedidoPreparado);
             System.out.println(pedidoPreparado);
+        }
+
+        System.out.println();
+        System.out.println("Ultimo pedido preparado: ");
+        System.out.println(historialPreparados.peek());
+        System.out.println();
+
+        System.out.println();
+        System.out.println("Pedido extraido del historial de pedidos preparados:");
+        System.out.println(historialPreparados.pop());
+        System.out.println();
+
+        System.out.println("Pedidos que quedan pendientes:");
+        for (Pedido pedido : colaPedidos) {
+            System.out.println(pedido);
+        }
+
+        System.out.println();
+
+        if (colaPedidos.isEmpty()) {
+            
+            System.out.println("No hay pedidos pendientes");
+        } else {
+
+            System.out.println("Pedidos pendientes:");
+            for (Pedido pedido : colaPedidos) {
+                System.out.println(pedido);
+            }
         }
     }
 }
